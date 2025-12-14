@@ -45,8 +45,18 @@
     <h2>📱 Electrónica</h2>
 
     <h3>Celulares</h3>
-    <div class="row">"+""+"
+    <div class="row">
       <div class="card">
+        <div class="product-gallery">
+          <div class="main-image"><img src="imagenes/celular-1.jpg" id="cel-1"></div>
+          <div class="thumbnails">
+            <img src="imagenes/celular-1.jpg" class="active" onclick="changeImage('cel-1',this)">
+            <img src="imagenes/celular-2.jpg" onclick="changeImage('cel-1',this)">
+            <img src="imagenes/celular-3.jpg" onclick="changeImage('cel-1',this)">
+          </div>
+        </div>
+        <h4>Celular Android</h4>
+        <span class="code">ELE-CEL-001</span>
         <div class="product-gallery">
           <div class="main-image"><img src="imagenes/celular-1.jpg" id="cel-1"></div>
           <div class="thumbnails">
@@ -155,3 +165,4 @@ function changeImage(id,el){const main=document.getElementById(id);main.src=el.s
 </script>
 </body>
 </html>
+
