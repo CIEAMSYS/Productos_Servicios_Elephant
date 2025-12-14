@@ -5,26 +5,126 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Productos y Servicios Elephant</title>
 
+  <!-- ================== ESTILOS ================== -->
   <style>
-    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#020617; color:#e5e7eb; }
-    header { text-align:center; padding:20px; border-bottom:2px solid #1e293b; }
-    .logo { font-size:48px; }
-    nav a { color:#e5e7eb; margin:0 12px; text-decoration:none; font-weight:bold; }
-    nav a:hover { color:#38bdf8; }
-    .container { padding:20px; }
-    .category { margin-bottom:50px; }
-    .category h2 { color:#38bdf8; border:1px solid #1e293b; padding:10px; border-radius:6px; }
-    .category h3 { margin-top:30px; color:#f8fafc; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:16px; margin-top:16px; }
-    .card { background:#020617; border:1px solid #1e293b; border-radius:12px; padding:16px; text-align:center; }
-    .card img { width:100%; height:150px; object-fit:contain; margin-bottom:10px; }
-    .card h4 { margin:10px 0 6px; font-size:16px; }
-    .code { display:inline-block; font-size:14px; color:#94a3b8; border:1px dashed #334155; padding:4px 8px; border-radius:6px; }
-    footer { text-align:center; padding:15px; border-top:2px solid #1e293b; color:#94a3b8; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      border-bottom: 2px solid #1e293b;
+    }
+
+    .logo {
+      font-size: 48px;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .category {
+      margin-bottom: 50px;
+    }
+
+    .category h2 {
+      color: #38bdf8;
+      border: 1px solid #1e293b;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .category h3 {
+      margin-top: 25px;
+      color: #f8fafc;
+    }
+
+    /* ===== FILAS HORIZONTALES ===== */
+    .row {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .row::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .row::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 10px;
+    }
+
+    .card {
+      min-width: 240px;
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 14px;
+      text-align: center;
+      scroll-snap-align: start;
+    }
+
+    /* ===== GALERIA POR PRODUCTO ===== */
+    .gallery {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      margin-bottom: 10px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 140px;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 1px solid #1e293b;
+      background: #020617;
+    }
+
+    .card h4 {
+      margin: 10px 0 6px;
+      font-size: 16px;
+    }
+
+    .code {
+      display: inline-block;
+      font-size: 14px;
+      color: #94a3b8;
+      border: 1px dashed #334155;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      border-top: 2px solid #1e293b;
+      color: #94a3b8;
+    }
   </style>
 </head>
 <body>
 
+<!-- ================== HEADER ================== -->
 <header>
   <div class="logo">🐘</div>
   <h1>Productos y Servicios Elephant</h1>
@@ -35,7 +135,7 @@
   </nav>
 </header>
 
-<!-- ================= PRODUCTOS ================= -->
+<!-- ================== PRODUCTOS ================== -->
 <div class="container" id="productos">
 
   <!-- ELECTRONICA -->
@@ -43,126 +143,220 @@
     <h2>📱 Electrónica</h2>
 
     <h3>Celulares</h3>
-    <div class="grid">
-      <div class="card"><img src="imagenes/ejemplo-celular.jpg"><h4>Celular Android</h4><span class="code">ELE-CEL-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-celular.jpg"><h4>Celular Android</h4><span class="code">ELE-CEL-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-celular.jpg"><h4>Celular Android</h4><span class="code">ELE-CEL-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-celular.jpg"><h4>Celular Android</h4><span class="code">ELE-CEL-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-celular.jpg"><h4>Celular Android</h4><span class="code">ELE-CEL-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-celular.jpg"><h4>Celular Android</h4><span class="code">ELE-CEL-001</span></div>
+    <div class="row">
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/celular-1.jpg">
+          <img src="imagenes/celular-2.jpg">
+          <img src="imagenes/celular-3.jpg">
+        </div>
+        <h4>Celular Android</h4>
+        <span class="code">ELE-CEL-001</span>
+      </div>
     </div>
 
     <h3>Laptops</h3>
-    <div class="grid">
-      <div class="card"><img src="imagenes/ejemplo-laptop.jpg"><h4>Laptop</h4><span class="code">ELE-LAP-002</span></div>
-      <div class="card"><img src="imagenes/ejemplo-laptop.jpg"><h4>Laptop</h4><span class="code">ELE-LAP-002</span></div>
-      <div class="card"><img src="imagenes/ejemplo-laptop.jpg"><h4>Laptop</h4><span class="code">ELE-LAP-002</span></div>
-      <div class="card"><img src="imagenes/ejemplo-laptop.jpg"><h4>Laptop</h4><span class="code">ELE-LAP-002</span></div>
-      <div class="card"><img src="imagenes/ejemplo-laptop.jpg"><h4>Laptop</h4><span class="code">ELE-LAP-002</span></div>
+    <div class="row">
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/laptop-1.jpg">
+          <img src="imagenes/laptop-2.jpg">
+        </div>
+        <h4>Laptop</h4>
+        <span class="code">ELE-LAP-002</span>
+      </div>
     </div>
 
     <h3>Computadoras de Escritorio</h3>
-    <div class="grid">
-      <div class="card"><img src="imagenes/ejemplo-pc.jpg"><h4>PC Escritorio</h4><span class="code">ELE-PC-003</span></div>
-      <div class="card"><img src="imagenes/ejemplo-pc.jpg"><h4>PC Escritorio</h4><span class="code">ELE-PC-003</span></div>
-      <div class="card"><img src="imagenes/ejemplo-pc.jpg"><h4>PC Escritorio</h4><span class="code">ELE-PC-003</span></div>
-      <div class="card"><img src="imagenes/ejemplo-pc.jpg"><h4>PC Escritorio</h4><span class="code">ELE-PC-003</span></div>
+    <div class="row">
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/pc-1.jpg">
+          <img src="imagenes/pc-2.jpg">
+        </div>
+        <h4>PC de Escritorio</h4>
+        <span class="code">ELE-PC-003</span>
+      </div>
     </div>
 
     <h3>Electrónica (Componentes)</h3>
-    <div class="grid">
-      <div class="card"><img src="imagenes/ejemplo-electronica.jpg"><h4>Componentes</h4><span class="code">ELE-ELC-004</span></div>
-      <div class="card"><img src="imagenes/ejemplo-electronica.jpg"><h4>Componentes</h4><span class="code">ELE-ELC-004</span></div>
-      <div class="card"><img src="imagenes/ejemplo-electronica.jpg"><h4>Componentes</h4><span class="code">ELE-ELC-004</span></div>
-      <div class="card"><img src="imagenes/ejemplo-electronica.jpg"><h4>Componentes</h4><span class="code">ELE-ELC-004</span></div>
+    <div class="row">
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/electronica-1.jpg">
+          <img src="imagenes/electronica-2.jpg">
+        </div>
+        <h4>Componentes Electrónicos</h4>
+        <span class="code">ELE-ELC-004</span>
+      </div>
     </div>
 
     <h3>Electrónicos (Gadgets)</h3>
-    <div class="grid">
-      <div class="card"><img src="imagenes/ejemplo-gadgets.jpg"><h4>Gadgets</h4><span class="code">ELE-GAD-005</span></div>
-      <div class="card"><img src="imagenes/ejemplo-gadgets.jpg"><h4>Gadgets</h4><span class="code">ELE-GAD-005</span></div>
-      <div class="card"><img src="imagenes/ejemplo-gadgets.jpg"><h4>Gadgets</h4><span class="code">ELE-GAD-005</span></div>
-      <div class="card"><img src="imagenes/ejemplo-gadgets.jpg"><h4>Gadgets</h4><span class="code">ELE-GAD-005</span></div>
+    <div class="row">
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/gadget-1.jpg">
+          <img src="imagenes/gadget-2.jpg">
+        </div>
+        <h4>Accesorios y Gadgets</h4>
+        <span class="code">ELE-GAD-005</span>
+      </div>
     </div>
   </div>
 
   <!-- PAPELERIA -->
   <div class="category">
     <h2>🖊️ Papelería</h2>
-    <div class="grid">
-      <div class="card"><img src="imagenes/ejemplo-papeleria.jpg"><h4>Cuadernos</h4><span class="code">PAP-CUA-101</span></div>
-      <div class="card"><img src="imagenes/ejemplo-papeleria.jpg"><h4>Plumas y Lápices</h4><span class="code">PAP-PLU-102</span></div>
-      <div class="card"><img src="imagenes/ejemplo-papeleria.jpg"><h4>Plumas y Lápices</h4><span class="code">PAP-PLU-102</span></div>
-      <div class="card"><img src="imagenes/ejemplo-papeleria.jpg"><h4>Plumas y Lápices</h4><span class="code">PAP-PLU-102</span></div>
+    <div class="row">
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/papeleria-1.jpg">
+          <img src="imagenes/papeleria-2.jpg">
+        </div>
+        <h4>Cuadernos y Útiles</h4>
+        <span class="code">PAP-001</span>
+      </div>
     </div>
   </div>
 
   <!-- IMPRESORAS -->
   <div class="category">
     <h2>🖨️ Impresoras</h2>
-    <div class="grid">
-      <div class="card"><img src="imagenes/ejemplo-impresora.jpg"><h4>Impresora</h4><span class="code">IMP-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-papeleria.jpg"><h4>Plumas y Lápices</h4><span class="code">PAP-PLU-102</span></div>
-      <div class="card"><img src="imagenes/ejemplo-papeleria.jpg"><h4>Plumas y Lápices</h4><span class="code">PAP-PLU-102</span></div>
-      <div class="card"><img src="imagenes/ejemplo-papeleria.jpg"><h4>Plumas y Lápices</h4><span class="code">PAP-PLU-102</span></div>
+    <div class="row">
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/impresora-1.jpg">
+          <img src="imagenes/impresora-2.jpg">
+        </div>
+        <h4>Impresoras</h4>
+        <span class="code">IMP-001</span>
+      </div>
     </div>
   </div>
 
   <!-- DULCERIA -->
   <div class="category">
     <h2>🍭 Dulcería</h2>
-    <div class="grid">
-      <div class="card"><img src="imagenes/ejemplo-dulces.jpg"><h4>Dulces Variados</h4><span class="code">DUL-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-dulces.jpg"><h4>Dulces Variados</h4><span class="code">DUL-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-dulces.jpg"><h4>Dulces Variados</h4><span class="code">DUL-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-dulces.jpg"><h4>Dulces Variados</h4><span class="code">DUL-001</span></div>
+    <div class="row">
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/dulces-1.jpg">
+          <img src="imagenes/dulces-2.jpg">
+        </div>
+        <h4>Dulces Variados</h4>
+        <span class="code">DUL-001</span>
+      </div>
     </div>
   </div>
 
   <!-- DESECHABLES -->
   <div class="category">
     <h2>🥤 Desechables</h2>
-    <div class="grid">
-      <div class="card"><img src="imagenes/ejemplo-desechables.jpg"><h4>Vasos y Platos</h4><span class="code">DES-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-desechables.jpg"><h4>Vasos y Platos</h4><span class="code">DES-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-desechables.jpg"><h4>Vasos y Platos</h4><span class="code">DES-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-desechables.jpg"><h4>Vasos y Platos</h4><span class="code">DES-001</span></div>
+    <div class="row">
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/desechables-1.jpg">
+          <img src="imagenes/desechables-2.jpg">
+        </div>
+        <h4>Desechables</h4>
+        <span class="code">DES-001</span>
+      </div>
     </div>
   </div>
 
   <!-- GRANOS -->
   <div class="category">
     <h2>🌾 Semillas y Granos</h2>
-    <div class="grid">
-      <div class="card"><img src="imagenes/ejemplo-granos.jpg"><h4>Arroz y Frijol</h4><span class="code">GRA-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-granos.jpg"><h4>Arroz y Frijol</h4><span class="code">GRA-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-granos.jpg"><h4>Arroz y Frijol</h4><span class="code">GRA-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-granos.jpg"><h4>Arroz y Frijol</h4><span class="code">GRA-001</span></div>
+    <div class="row">
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/granos-1.jpg">
+          <img src="imagenes/granos-2.jpg">
+        </div>
+        <h4>Granos y Semillas</h4>
+        <span class="code">GRA-001</span>
+      </div>
     </div>
   </div>
 
   <!-- PERSONALIZADOS -->
   <div class="category">
     <h2>🎨 Personalizados</h2>
-    <div class="grid">
-      <div class="card"><img src="imagenes/ejemplo-playera.jpg"><h4>Playeras</h4><span class="code">PER-PLY-301</span></div>
-      <div class="card"><img src="imagenes/ejemplo-sudadera.jpg"><h4>Sudaderas</h4><span class="code">PER-SUD-302</span></div>
-      <div class="card"><img src="imagenes/ejemplo-gorra.jpg"><h4>Gorras</h4><span class="code">PER-GOR-303</span></div>
-      <div class="card"><img src="imagenes/ejemplo-termo.jpg"><h4>Termos</h4><span class="code">PER-TER-304</span></div>
-      <div class="card"><img src="imagenes/ejemplo-taza.jpg"><h4>Tazas</h4><span class="code">PER-TAZ-305</span></div>
+    <div class="row">
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/playera-1.jpg">
+          <img src="imagenes/playera-2.jpg">
+        </div>
+        <h4>Playeras</h4>
+        <span class="code">PER-PLY-301</span>
+      </div>
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/sudadera-1.jpg">
+          <img src="imagenes/sudadera-2.jpg">
+        </div>
+        <h4>Sudaderas</h4>
+        <span class="code">PER-SUD-302</span>
+      </div>
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/gorra-1.jpg">
+          <img src="imagenes/gorra-2.jpg">
+        </div>
+        <h4>Gorras</h4>
+        <span class="code">PER-GOR-303</span>
+      </div>
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/termo-1.jpg">
+          <img src="imagenes/termo-2.jpg">
+        </div>
+        <h4>Termos</h4>
+        <span class="code">PER-TER-304</span>
+      </div>
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/taza-1.jpg">
+          <img src="imagenes/taza-2.jpg">
+        </div>
+        <h4>Tazas</h4>
+        <span class="code">PER-TAZ-305</span>
+      </div>
     </div>
   </div>
 
 </div>
 
-<!-- ================= SERVICIOS ================= -->
+<!-- ================== SERVICIOS ================== -->
 <div class="container" id="servicios">
   <div class="category">
     <h2>🛠️ Servicios</h2>
-    <div class="grid">
-      <div class="card"><img src="imagenes/ejemplo-reparacion.jpg"><h4>Reparación</h4><span class="code">SER-REP-001</span></div>
-      <div class="card"><img src="imagenes/ejemplo-mantenimiento.jpg"><h4>Mantenimiento</h4><span class="code">SER-MAN-002</span></div>
-      <div class="card"><img src="imagenes/ejemplo-personalizacion.jpg"><h4>Personalización</h4><span class="code">SER-PER-003</span></div>
+    <div class="row">
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/reparacion-1.jpg">
+          <img src="imagenes/reparacion-2.jpg">
+        </div>
+        <h4>Reparación</h4>
+        <span class="code">SER-REP-001</span>
+      </div>
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/mantenimiento-1.jpg">
+          <img src="imagenes/mantenimiento-2.jpg">
+        </div>
+        <h4>Mantenimiento</h4>
+        <span class="code">SER-MAN-002</span>
+      </div>
+      <div class="card">
+        <div class="gallery">
+          <img src="imagenes/personalizacion-1.jpg">
+          <img src="imagenes/personalizacion-2.jpg">
+        </div>
+        <h4>Personalización</h4>
+        <span class="code">SER-PER-003</span>
+      </div>
     </div>
   </div>
 </div>
@@ -172,13 +366,12 @@
 </footer>
 
 <!--
-COMO AGREGAR MAS PRODUCTOS:
-1. Sube imágenes a /imagenes
-2. Copia un bloque <div class="card">
-3. Cambia imagen, nombre y código
-4. Guarda como index.html
+COMO AGREGAR VARIAS IMAGENES A UN PRODUCTO:
+1. Dentro de <div class="gallery"> agrega tantas <img> como quieras
+2. Todas deben estar en la carpeta /imagenes
+3. Copia el <div class="card"> completo para nuevos productos
+4. Todas las categorias usan filas horizontales (.row)
 -->
 
 </body>
 </html>
-
