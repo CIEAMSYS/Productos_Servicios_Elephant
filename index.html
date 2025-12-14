@@ -1,30 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Productos y Servicios Elephant</title>
+
+  <!-- ESTILOS GENERALES / VERSION OSCURA -->
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background:#020617; color:#e5e7eb; }
-    header { background:#020617; color:#fff; padding:20px; text-align:center; border-bottom:2px solid #1e293b; }
-    header h1 { margin:10px 0 5px; }
-    .logo { font-size:42px; }
-    nav { margin-top:10px; }
-    nav a { color:#e5e7eb; margin:0 10px; text-decoration:none; font-weight:bold; }
-    nav a:hover { color:#38bdf8; }
-    .container { padding:20px; }
-    .category { margin-bottom:40px; }
-    .category h2 { background:#020617; border:1px solid #1e293b; color:#38bdf8; padding:10px; border-radius:6px; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap:16px; margin-top:16px; }
-    .card { background:#020617; border:1px solid #1e293b; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.6); padding:16px; text-align:center; }
-    .card img { width:100%; height:150px; object-fit:contain; margin-bottom:10px; }
-    .card h3 { margin:10px 0 5px; font-size:18px; color:#fff; }
-    .code { font-size:14px; color:#94a3b8; background:#020617; border:1px dashed #334155; padding:4px 8px; border-radius:6px; display:inline-block; }
-    footer { background:#020617; color:#94a3b8; text-align:center; padding:15px; border-top:2px solid #1e293b; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #020617;
+      color: #e5e7eb;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      border-bottom: 2px solid #1e293b;
+    }
+
+    .logo {
+      font-size: 48px;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .category {
+      margin-bottom: 50px;
+    }
+
+    .category h2 {
+      color: #38bdf8;
+      border: 1px solid #1e293b;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .category h3 {
+      margin-top: 30px;
+      color: #f8fafc;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .card {
+      background-color: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .card h4 {
+      margin: 10px 0 6px;
+      font-size: 16px;
+    }
+
+    .code {
+      display: inline-block;
+      font-size: 14px;
+      color: #94a3b8;
+      border: 1px dashed #334155;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      border-top: 2px solid #1e293b;
+      color: #94a3b8;
+    }
   </style>
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="logo">🐘</div>
   <h1>Productos y Servicios Elephant</h1>
@@ -35,96 +113,105 @@
   </nav>
 </header>
 
+<!-- ===================== PRODUCTOS ===================== -->
 <div class="container" id="productos">
 
+  <!-- ELECTRONICA -->
   <div class="category">
-    <h2>📱 Electrónica y Cómputo</h2>
-    <div class="grid">
-      <div class="card"><img src="https://via.placeholder.com/200x150?text=Celular" alt="Celular Android"><h3>Celular Android</h3><span class="code">ELE-CEL-001</span></div>
-      <div class="card"><img src="https://via.placeholder.com/200x150?text=Laptop" alt="Laptop"><h3>Laptop</h3><span class="code">ELE-LAP-002</span></div>
-      <div class="card"><img src="https://via.placeholder.com/200x150?text=PC" alt="PC Escritorio"><h3>Computadora de Escritorio</h3><span class="code">ELE-PC-003</span></div>
-      <div class="card"><img src="https://via.placeholder.com/200x150?text=Impresora" alt="Impresora"><h3>Impresora</h3><span class="code">ELE-IMP-004</span></div>
-    </div>
-  </div>
+    <h2>📱 Electrónica</h2>
 
-  <div class="category">
-    <h2>🖊️ Papelería</h2>
+    <h3>Celulares</h3>
     <div class="grid">
-      <div class="card"><h3>Cuadernos</h3><span class="code">PAP-CUA-101</span></div>
-      <div class="card"><h3>Plumas y Lápices</h3><span class="code">PAP-PLU-102</span></div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x150?text=Celular" alt="Celular">
+        <h4>Celular Android</h4>
+        <span class="code">ELE-CEL-001</span>
+      </div>
     </div>
-  </div>
 
-  <div class="category">
-    <h2>🍭 Dulcería y Desechables</h2>
+    <h3>Laptops</h3>
     <div class="grid">
-      <div class="card"><h3>Dulces Variados</h3><span class="code">DUL-001</span></div>
-      <div class="card"><h3>Vasos Desechables</h3><span class="code">DES-002</span></div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x150?text=Laptop" alt="Laptop">
+        <h4>Laptop</h4>
+        <span class="code">ELE-LAP-002</span>
+      </div>
     </div>
-  </div>
 
-  <div class="category">
-    <h2>🌾 Semillas y Granos</h2>
+    <h3>Computadoras de Escritorio</h3>
     <div class="grid">
-      <div class="card"><h3>Arroz</h3><span class="code">GRA-ARZ-201</span></div>
-      <div class="card"><h3>Frijol</h3><span class="code">GRA-FRJ-202</span></div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x150?text=PC" alt="PC Escritorio">
+        <h4>Computadora de Escritorio</h4>
+        <span class="code">ELE-PC-003</span>
+      </div>
     </div>
-  </div>
 
-  <div class="category">
-    <h2>🎨 Personalizados</h2>
+    <h3>Electrónica (Componentes)</h3>
     <div class="grid">
-      <div class="card"><h3>Sudaderas Personalizadas</h3><span class="code">PER-SUD-301</span></div>
-      <div class="card"><h3>Playeras</h3><span class="code">PER-PLY-302</span></div>
-      <div class="card"><h3>Gorras</h3><span class="code">PER-GOR-303</span></div>
-      <div class="card"><h3>Termos</h3><span class="code">PER-TER-304</span></div>
-      <div class="card"><h3>Tazas</h3><span class="code">PER-TAZ-305</span></div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x150?text=Electrónica" alt="Componentes">
+        <h4>Componentes Electrónicos</h4>
+        <span class="code">ELE-ELC-004</span>
+      </div>
     </div>
+
+    <h3>Electrónicos (Gadgets)</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/200x150?text=Gadgets" alt="Gadgets">
+        <h4>Accesorios y Gadgets</h4>
+        <span class="code">ELE-GAD-005</span>
+      </div>
+    </div>
+
   </div>
 
 </div>
 
+<!-- ===================== SERVICIOS ===================== -->
 <div class="container" id="servicios">
+
   <div class="category">
     <h2>🛠️ Servicios</h2>
+
     <div class="grid">
       <div class="card">
         <img src="https://via.placeholder.com/200x150?text=Reparación" alt="Reparación">
-        <h3>Reparación</h3>
-        <p>Celulares, laptops, computadoras, impresoras y electrónica en general.</p>
+        <h4>Reparación</h4>
         <span class="code">SER-REP-001</span>
       </div>
+
       <div class="card">
         <img src="https://via.placeholder.com/200x150?text=Mantenimiento" alt="Mantenimiento">
-        <h3>Mantenimiento</h3>
-        <p>Preventivo y correctivo para equipos de cómputo y electrónicos.</p>
+        <h4>Mantenimiento</h4>
         <span class="code">SER-MAN-002</span>
       </div>
+
       <div class="card">
         <img src="https://via.placeholder.com/200x150?text=Personalización" alt="Personalización">
-        <h3>Personalización</h3>
-        <p>Sudaderas, playeras, gorras, termos y tazas.</p>
+        <h4>Personalización</h4>
         <span class="code">SER-PER-003</span>
       </div>
     </div>
+
   </div>
+
 </div>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2025 Productos y Servicios Elephant | Catálogo digital</p>
+  © 2025 Productos y Servicios Elephant | Catálogo digital
 </footer>
 
-<!-- ================== COMO AGREGAR MAS PRODUCTOS ==================
-1. Copia un bloque <div class="card"> existente
-2. Cambia la imagen (src) por la foto real del producto
-3. Modifica el nombre dentro de <h3>
-4. Asigna un código único siguiendo el formato:
-   CATEGORIA-PRODUCTO-NUMERO
-   Ejemplo: ELE-ACC-010, PAP-HOJ-110, PER-SUD-320
-5. Guarda y vuelve a subir el archivo a GitHub
-================================================================== -->
+<!--
+COMO AGREGAR MAS PRODUCTOS:
+1. Copia un <div class="card"> completo
+2. Cambia imagen, nombre y código
+3. Mantén todos los <div> bien cerrados
+4. Guarda como index.html
+5. Súbelo a GitHub
+-->
 
 </body>
 </html>
-
-
