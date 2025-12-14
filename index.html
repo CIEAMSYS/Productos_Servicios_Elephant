@@ -20,9 +20,7 @@
       border-bottom: 2px solid #1e293b;
     }
 
-    .logo {
-      font-size: 48px;
-    }
+    .logo { font-size: 48px; }
 
     nav a {
       color: #e5e7eb;
@@ -31,17 +29,11 @@
       font-weight: bold;
     }
 
-    nav a:hover {
-      color: #38bdf8;
-    }
+    nav a:hover { color: #38bdf8; }
 
-    .container {
-      padding: 20px;
-    }
+    .container { padding: 20px; }
 
-    .category {
-      margin-bottom: 50px;
-    }
+    .category { margin-bottom: 50px; }
 
     .category h2 {
       color: #38bdf8;
@@ -50,68 +42,83 @@
       border-radius: 6px;
     }
 
-    .category h3 {
-      margin-top: 25px;
-      color: #f8fafc;
-    }
+    .category h3 { margin-top: 25px; color: #f8fafc; }
 
     /* ===== FILAS HORIZONTALES ===== */
     .row {
       display: flex;
-      gap: 16px;
+      gap: 20px;
       overflow-x: auto;
-      padding-bottom: 10px;
+      padding-bottom: 15px;
       scroll-snap-type: x mandatory;
     }
 
-    .row::-webkit-scrollbar {
-      height: 8px;
-    }
-
+    .row::-webkit-scrollbar { height: 8px; }
     .row::-webkit-scrollbar-thumb {
       background: #334155;
       border-radius: 10px;
     }
 
     .card {
-      min-width: 240px;
+      min-width: 260px;
       background: #020617;
       border: 1px solid #1e293b;
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 14px;
-      text-align: center;
       scroll-snap-align: start;
     }
 
-    /* ===== GALERIA POR PRODUCTO ===== */
-    .gallery {
+    /* ===== GALERIA TIPO MERCADO LIBRE ===== */
+    .product-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .main-image img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      border-radius: 10px;
+      border: 1px solid #1e293b;
+      cursor: pointer;
+    }
+
+    .thumbnails {
       display: flex;
       gap: 6px;
       overflow-x: auto;
-      margin-bottom: 10px;
     }
 
-    .gallery img {
-      width: 200px;
-      height: 140px;
+    .thumbnails img {
+      width: 60px;
+      height: 60px;
       object-fit: contain;
-      border-radius: 8px;
-      border: 1px solid #1e293b;
-      background: #020617;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      cursor: pointer;
+      opacity: 0.7;
     }
+
+    .thumbnails img.active,
+    .thumbnails img:hover { opacity: 1; border-color: #38bdf8; }
 
     .card h4 {
       margin: 10px 0 6px;
       font-size: 16px;
+      text-align: center;
     }
 
     .code {
-      display: inline-block;
+      display: block;
+      text-align: center;
       font-size: 14px;
       color: #94a3b8;
       border: 1px dashed #334155;
       padding: 4px 8px;
       border-radius: 6px;
+      margin: auto;
+      width: fit-content;
     }
 
     footer {
@@ -138,191 +145,25 @@
 <!-- ================== PRODUCTOS ================== -->
 <div class="container" id="productos">
 
-  <!-- ELECTRONICA -->
   <div class="category">
-    <h2>📱 Electrónica</h2>
-
-    <h3>Celulares</h3>
+    <h2>📱 Electrónica - Celulares</h2>
     <div class="row">
+
       <div class="card">
-        <div class="gallery">
-          <img src="imagenes/celular-1.jpg">
-          <img src="imagenes/celular-2.jpg">
-          <img src="imagenes/celular-3.jpg">
+        <div class="product-gallery">
+          <div class="main-image">
+            <img src="imagenes/celular-1.jpg" id="main-ele-cel-1">
+          </div>
+          <div class="thumbnails">
+            <img src="imagenes/celular-1.jpg" class="active" onclick="changeImage('main-ele-cel-1', this)">
+            <img src="imagenes/celular-2.jpg" onclick="changeImage('main-ele-cel-1', this)">
+            <img src="imagenes/celular-3.jpg" onclick="changeImage('main-ele-cel-1', this)">
+          </div>
         </div>
         <h4>Celular Android</h4>
         <span class="code">ELE-CEL-001</span>
       </div>
-    </div>
 
-    <h3>Laptops</h3>
-    <div class="row">
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/laptop-1.jpg">
-          <img src="imagenes/laptop-2.jpg">
-        </div>
-        <h4>Laptop</h4>
-        <span class="code">ELE-LAP-002</span>
-      </div>
-    </div>
-
-    <h3>Computadoras de Escritorio</h3>
-    <div class="row">
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/pc-1.jpg">
-          <img src="imagenes/pc-2.jpg">
-        </div>
-        <h4>PC de Escritorio</h4>
-        <span class="code">ELE-PC-003</span>
-      </div>
-    </div>
-
-    <h3>Electrónica (Componentes)</h3>
-    <div class="row">
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/electronica-1.jpg">
-          <img src="imagenes/electronica-2.jpg">
-        </div>
-        <h4>Componentes Electrónicos</h4>
-        <span class="code">ELE-ELC-004</span>
-      </div>
-    </div>
-
-    <h3>Electrónicos (Gadgets)</h3>
-    <div class="row">
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/gadget-1.jpg">
-          <img src="imagenes/gadget-2.jpg">
-        </div>
-        <h4>Accesorios y Gadgets</h4>
-        <span class="code">ELE-GAD-005</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- PAPELERIA -->
-  <div class="category">
-    <h2>🖊️ Papelería</h2>
-    <div class="row">
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/papeleria-1.jpg">
-          <img src="imagenes/papeleria-2.jpg">
-        </div>
-        <h4>Cuadernos y Útiles</h4>
-        <span class="code">PAP-001</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- IMPRESORAS -->
-  <div class="category">
-    <h2>🖨️ Impresoras</h2>
-    <div class="row">
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/impresora-1.jpg">
-          <img src="imagenes/impresora-2.jpg">
-        </div>
-        <h4>Impresoras</h4>
-        <span class="code">IMP-001</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- DULCERIA -->
-  <div class="category">
-    <h2>🍭 Dulcería</h2>
-    <div class="row">
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/dulces-1.jpg">
-          <img src="imagenes/dulces-2.jpg">
-        </div>
-        <h4>Dulces Variados</h4>
-        <span class="code">DUL-001</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- DESECHABLES -->
-  <div class="category">
-    <h2>🥤 Desechables</h2>
-    <div class="row">
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/desechables-1.jpg">
-          <img src="imagenes/desechables-2.jpg">
-        </div>
-        <h4>Desechables</h4>
-        <span class="code">DES-001</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- GRANOS -->
-  <div class="category">
-    <h2>🌾 Semillas y Granos</h2>
-    <div class="row">
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/granos-1.jpg">
-          <img src="imagenes/granos-2.jpg">
-        </div>
-        <h4>Granos y Semillas</h4>
-        <span class="code">GRA-001</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- PERSONALIZADOS -->
-  <div class="category">
-    <h2>🎨 Personalizados</h2>
-    <div class="row">
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/playera-1.jpg">
-          <img src="imagenes/playera-2.jpg">
-        </div>
-        <h4>Playeras</h4>
-        <span class="code">PER-PLY-301</span>
-      </div>
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/sudadera-1.jpg">
-          <img src="imagenes/sudadera-2.jpg">
-        </div>
-        <h4>Sudaderas</h4>
-        <span class="code">PER-SUD-302</span>
-      </div>
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/gorra-1.jpg">
-          <img src="imagenes/gorra-2.jpg">
-        </div>
-        <h4>Gorras</h4>
-        <span class="code">PER-GOR-303</span>
-      </div>
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/termo-1.jpg">
-          <img src="imagenes/termo-2.jpg">
-        </div>
-        <h4>Termos</h4>
-        <span class="code">PER-TER-304</span>
-      </div>
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/taza-1.jpg">
-          <img src="imagenes/taza-2.jpg">
-        </div>
-        <h4>Tazas</h4>
-        <span class="code">PER-TAZ-305</span>
-      </div>
     </div>
   </div>
 
@@ -333,44 +174,46 @@
   <div class="category">
     <h2>🛠️ Servicios</h2>
     <div class="row">
+
       <div class="card">
-        <div class="gallery">
-          <img src="imagenes/reparacion-1.jpg">
-          <img src="imagenes/reparacion-2.jpg">
+        <div class="product-gallery">
+          <div class="main-image">
+            <img src="imagenes/reparacion-1.jpg" id="main-ser-rep-1">
+          </div>
+          <div class="thumbnails">
+            <img src="imagenes/reparacion-1.jpg" class="active" onclick="changeImage('main-ser-rep-1', this)">
+            <img src="imagenes/reparacion-2.jpg" onclick="changeImage('main-ser-rep-1', this)">
+          </div>
         </div>
         <h4>Reparación</h4>
         <span class="code">SER-REP-001</span>
       </div>
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/mantenimiento-1.jpg">
-          <img src="imagenes/mantenimiento-2.jpg">
-        </div>
-        <h4>Mantenimiento</h4>
-        <span class="code">SER-MAN-002</span>
-      </div>
-      <div class="card">
-        <div class="gallery">
-          <img src="imagenes/personalizacion-1.jpg">
-          <img src="imagenes/personalizacion-2.jpg">
-        </div>
-        <h4>Personalización</h4>
-        <span class="code">SER-PER-003</span>
-      </div>
+
     </div>
   </div>
 </div>
 
 <footer>
-  © 2025 Productos y Servicios Elephant | Catálogo digital
+  © 2025 Productos y Servicios Elephant | Whatssapp: 4491023558 | Gmail: 
 </footer>
 
+<!-- ================== SCRIPT ================== -->
+<script>
+  function changeImage(mainId, thumb) {
+    const mainImage = document.getElementById(mainId);
+    mainImage.src = thumb.src;
+
+    const thumbnails = thumb.parentElement.querySelectorAll('img');
+    thumbnails.forEach(img => img.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+</script>
+
 <!--
-COMO AGREGAR VARIAS IMAGENES A UN PRODUCTO:
-1. Dentro de <div class="gallery"> agrega tantas <img> como quieras
-2. Todas deben estar en la carpeta /imagenes
-3. Copia el <div class="card"> completo para nuevos productos
-4. Todas las categorias usan filas horizontales (.row)
+COMO AGREGAR GALERIA TIPO MERCADO LIBRE:
+1. Cada producto debe tener un ID unico en la imagen principal
+2. Las miniaturas llaman a changeImage('ID', this)
+3. Aplica igual a productos y servicios
 -->
 
 </body>
