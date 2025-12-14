@@ -4,134 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Productos y Servicios Elephant</title>
-
-  <!-- ================== ESTILOS ================== -->
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #020617;
-      color: #e5e7eb;
-    }
-
-    header {
-      text-align: center;
-      padding: 20px;
-      border-bottom: 2px solid #1e293b;
-    }
-
-    .logo { font-size: 48px; }
-
-    nav a {
-      color: #e5e7eb;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover { color: #38bdf8; }
-
-    .container { padding: 20px; }
-
-    .category { margin-bottom: 50px; }
-
-    .category h2 {
-      color: #38bdf8;
-      border: 1px solid #1e293b;
-      padding: 10px;
-      border-radius: 6px;
-    }
-
-    .category h3 { margin-top: 25px; color: #f8fafc; }
-
-    /* ===== FILAS HORIZONTALES ===== */
-    .row {
-      display: flex;
-      gap: 20px;
-      overflow-x: auto;
-      padding-bottom: 15px;
-      scroll-snap-type: x mandatory;
-    }
-
-    .row::-webkit-scrollbar { height: 8px; }
-    .row::-webkit-scrollbar-thumb {
-      background: #334155;
-      border-radius: 10px;
-    }
-
-    .card {
-      min-width: 260px;
-      background: #020617;
-      border: 1px solid #1e293b;
-      border-radius: 14px;
-      padding: 14px;
-      scroll-snap-align: start;
-    }
-
-    /* ===== GALERIA TIPO MERCADO LIBRE ===== */
-    .product-gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .main-image img {
-      width: 100%;
-      height: 180px;
-      object-fit: contain;
-      border-radius: 10px;
-      border: 1px solid #1e293b;
-      cursor: pointer;
-    }
-
-    .thumbnails {
-      display: flex;
-      gap: 6px;
-      overflow-x: auto;
-    }
-
-    .thumbnails img {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-      border-radius: 6px;
-      border: 1px solid #334155;
-      cursor: pointer;
-      opacity: 0.7;
-    }
-
-    .thumbnails img.active,
-    .thumbnails img:hover { opacity: 1; border-color: #38bdf8; }
-
-    .card h4 {
-      margin: 10px 0 6px;
-      font-size: 16px;
-      text-align: center;
-    }
-
-    .code {
-      display: block;
-      text-align: center;
-      font-size: 14px;
-      color: #94a3b8;
-      border: 1px dashed #334155;
-      padding: 4px 8px;
-      border-radius: 6px;
-      margin: auto;
-      width: fit-content;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      border-top: 2px solid #1e293b;
-      color: #94a3b8;
-    }
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#020617;color:#e5e7eb}
+    header{text-align:center;padding:20px;border-bottom:2px solid #1e293b}
+    .logo{font-size:48px}
+    nav a{color:#e5e7eb;margin:0 12px;text-decoration:none;font-weight:bold}
+    nav a:hover{color:#38bdf8}
+    .container{padding:20px}
+    .category{margin-bottom:50px}
+    .category h2{color:#38bdf8;border:1px solid #1e293b;padding:10px;border-radius:6px}
+    .category h3{margin-top:25px;color:#f8fafc}
+    .row{display:flex;gap:20px;overflow-x:auto;padding-bottom:15px;scroll-snap-type:x mandatory}
+    .row::-webkit-scrollbar{height:8px}
+    .row::-webkit-scrollbar-thumb{background:#334155;border-radius:10px}
+    .card{min-width:260px;background:#020617;border:1px solid #1e293b;border-radius:14px;padding:14px;scroll-snap-align:start}
+    .product-gallery{display:flex;flex-direction:column;gap:8px}
+    .main-image img{width:100%;height:180px;object-fit:contain;border-radius:10px;border:1px solid #1e293b}
+    .thumbnails{display:flex;gap:6px;overflow-x:auto}
+    .thumbnails img{width:60px;height:60px;object-fit:contain;border-radius:6px;border:1px solid #334155;cursor:pointer;opacity:.7}
+    .thumbnails img.active,.thumbnails img:hover{opacity:1;border-color:#38bdf8}
+    .card h4{text-align:center;margin:10px 0 6px}
+    .code{display:block;text-align:center;font-size:14px;color:#94a3b8;border:1px dashed #334155;padding:4px 8px;border-radius:6px;width:fit-content;margin:auto}
+    footer{text-align:center;padding:15px;border-top:2px solid #1e293b;color:#94a3b8}
   </style>
 </head>
 <body>
-
-<!-- ================== HEADER ================== -->
 <header>
   <div class="logo">🐘</div>
   <h1>Productos y Servicios Elephant</h1>
@@ -142,79 +39,119 @@
   </nav>
 </header>
 
-<!-- ================== PRODUCTOS ================== -->
 <div class="container" id="productos">
 
   <div class="category">
-    <h2>📱 Electrónica - Celulares</h2>
-    <div class="row">
+    <h2>📱 Electrónica</h2>
 
+    <h3>Celulares</h3>
+    <div class="row">"+""+"
       <div class="card">
         <div class="product-gallery">
-          <div class="main-image">
-            <img src="imagenes/celular-1.jpg" id="main-ele-cel-1">
-          </div>
+          <div class="main-image"><img src="imagenes/celular-1.jpg" id="cel-1"></div>
           <div class="thumbnails">
-            <img src="imagenes/celular-1.jpg" class="active" onclick="changeImage('main-ele-cel-1', this)">
-            <img src="imagenes/celular-2.jpg" onclick="changeImage('main-ele-cel-1', this)">
-            <img src="imagenes/celular-3.jpg" onclick="changeImage('main-ele-cel-1', this)">
+            <img src="imagenes/celular-1.jpg" class="active" onclick="changeImage('cel-1',this)">
+            <img src="imagenes/celular-2.jpg" onclick="changeImage('cel-1',this)">
+            <img src="imagenes/celular-3.jpg" onclick="changeImage('cel-1',this)">
           </div>
         </div>
         <h4>Celular Android</h4>
         <span class="code">ELE-CEL-001</span>
       </div>
-
     </div>
-  </div>
 
-</div>
-
-<!-- ================== SERVICIOS ================== -->
-<div class="container" id="servicios">
-  <div class="category">
-    <h2>🛠️ Servicios</h2>
+    <h3>Laptops</h3>
     <div class="row">
-
       <div class="card">
         <div class="product-gallery">
-          <div class="main-image">
-            <img src="imagenes/reparacion-1.jpg" id="main-ser-rep-1">
-          </div>
+          <div class="main-image"><img src="imagenes/laptop-1.jpg" id="lap-1"></div>
           <div class="thumbnails">
-            <img src="imagenes/reparacion-1.jpg" class="active" onclick="changeImage('main-ser-rep-1', this)">
-            <img src="imagenes/reparacion-2.jpg" onclick="changeImage('main-ser-rep-1', this)">
+            <img src="imagenes/laptop-1.jpg" class="active" onclick="changeImage('lap-1',this)">
+            <img src="imagenes/laptop-2.jpg" onclick="changeImage('lap-1',this)">
           </div>
         </div>
-        <h4>Reparación</h4>
-        <span class="code">SER-REP-001</span>
+        <h4>Laptop</h4>
+        <span class="code">ELE-LAP-002</span>
       </div>
+    </div>
 
+    <h3>Computadoras de Escritorio</h3>
+    <div class="row">
+      <div class="card">
+        <div class="product-gallery">
+          <div class="main-image"><img src="imagenes/pc-1.jpg" id="pc-1"></div>
+          <div class="thumbnails">
+            <img src="imagenes/pc-1.jpg" class="active" onclick="changeImage('pc-1',this)">
+            <img src="imagenes/pc-2.jpg" onclick="changeImage('pc-1',this)">
+          </div>
+        </div>
+        <h4>PC Escritorio</h4>
+        <span class="code">ELE-PC-003</span>
+      </div>
+    </div>
+
+    <h3>Electrónica</h3>
+    <div class="row">
+      <div class="card">
+        <div class="product-gallery">
+          <div class="main-image"><img src="imagenes/electronica-1.jpg" id="elc-1"></div>
+          <div class="thumbnails">
+            <img src="imagenes/electronica-1.jpg" class="active" onclick="changeImage('elc-1',this)">
+            <img src="imagenes/electronica-2.jpg" onclick="changeImage('elc-1',this)">
+          </div>
+        </div>
+        <h4>Componentes</h4>
+        <span class="code">ELE-ELC-004</span>
+      </div>
+    </div>
+
+    <h3>Electrónicos</h3>
+    <div class="row">
+      <div class="card">
+        <div class="product-gallery">
+          <div class="main-image"><img src="imagenes/gadget-1.jpg" id="gad-1"></div>
+          <div class="thumbnails">
+            <img src="imagenes/gadget-1.jpg" class="active" onclick="changeImage('gad-1',this)">
+            <img src="imagenes/gadget-2.jpg" onclick="changeImage('gad-1',this)">
+          </div>
+        </div>
+        <h4>Gadgets</h4>
+        <span class="code">ELE-GAD-005</span>
+      </div>
     </div>
   </div>
+
+  <div class="category"><h2>🖊️ Papelería</h2><div class="row"><div class="card"><div class="product-gallery"><div class="main-image"><img src="imagenes/papeleria-1.jpg" id="pap-1"></div><div class="thumbnails"><img src="imagenes/papeleria-1.jpg" class="active" onclick="changeImage('pap-1',this)"><img src="imagenes/papeleria-2.jpg" onclick="changeImage('pap-1',this)"></div></div><h4>Papelería</h4><span class="code">PAP-001</span></div></div></div>
+
+  <div class="category"><h2>🖨️ Impresoras</h2><div class="row"><div class="card"><div class="product-gallery"><div class="main-image"><img src="imagenes/impresora-1.jpg" id="imp-1"></div><div class="thumbnails"><img src="imagenes/impresora-1.jpg" class="active" onclick="changeImage('imp-1',this)"><img src="imagenes/impresora-2.jpg" onclick="changeImage('imp-1',this)"></div></div><h4>Impresoras</h4><span class="code">IMP-001</span></div></div></div>
+
+  <div class="category"><h2>🍭 Dulcería</h2><div class="row"><div class="card"><div class="product-gallery"><div class="main-image"><img src="imagenes/dulces-1.jpg" id="dul-1"></div><div class="thumbnails"><img src="imagenes/dulces-1.jpg" class="active" onclick="changeImage('dul-1',this)"><img src="imagenes/dulces-2.jpg" onclick="changeImage('dul-1',this)"></div></div><h4>Dulces</h4><span class="code">DUL-001</span></div></div></div>
+
+  <div class="category"><h2>🥤 Desechables</h2><div class="row"><div class="card"><div class="product-gallery"><div class="main-image"><img src="imagenes/desechables-1.jpg" id="des-1"></div><div class="thumbnails"><img src="imagenes/desechables-1.jpg" class="active" onclick="changeImage('des-1',this)"><img src="imagenes/desechables-2.jpg" onclick="changeImage('des-1',this)"></div></div><h4>Desechables</h4><span class="code">DES-001</span></div></div></div>
+
+  <div class="category"><h2>🌾 Semillas y Granos</h2><div class="row"><div class="card"><div class="product-gallery"><div class="main-image"><img src="imagenes/granos-1.jpg" id="gra-1"></div><div class="thumbnails"><img src="imagenes/granos-1.jpg" class="active" onclick="changeImage('gra-1',this)"><img src="imagenes/granos-2.jpg" onclick="changeImage('gra-1',this)"></div></div><h4>Granos</h4><span class="code">GRA-001</span></div></div></div>
+
+  <div class="category"><h2>🎨 Personalizados</h2><div class="row">
+    <div class="card"><div class="product-gallery"><div class="main-image"><img src="imagenes/playera-1.jpg" id="per-1"></div><div class="thumbnails"><img src="imagenes/playera-1.jpg" class="active" onclick="changeImage('per-1',this)"><img src="imagenes/playera-2.jpg" onclick="changeImage('per-1',this)"></div></div><h4>Playeras</h4><span class="code">PER-PLY-301</span></div>
+    <div class="card"><div class="product-gallery"><div class="main-image"><img src="imagenes/sudadera-1.jpg" id="per-2"></div><div class="thumbnails"><img src="imagenes/sudadera-1.jpg" class="active" onclick="changeImage('per-2',this)"><img src="imagenes/sudadera-2.jpg" onclick="changeImage('per-2',this)"></div></div><h4>Sudaderas</h4><span class="code">PER-SUD-302</span></div>
+    <div class="card"><div class="product-gallery"><div class="main-image"><img src="imagenes/gorra-1.jpg" id="per-3"></div><div class="thumbnails"><img src="imagenes/gorra-1.jpg" class="active" onclick="changeImage('per-3',this)"><img src="imagenes/gorra-2.jpg" onclick="changeImage('per-3',this)"></div></div><h4>Gorras</h4><span class="code">PER-GOR-303</span></div>
+    <div class="card"><div class="product-gallery"><div class="main-image"><img src="imagenes/termo-1.jpg" id="per-4"></div><div class="thumbnails"><img src="imagenes/termo-1.jpg" class="active" onclick="changeImage('per-4',this)"><img src="imagenes/termo-2.jpg" onclick="changeImage('per-4',this)"></div></div><h4>Termos</h4><span class="code">PER-TER-304</span></div>
+    <div class="card"><div class="product-gallery"><div class="main-image"><img src="imagenes/taza-1.jpg" id="per-5"></div><div class="thumbnails"><img src="imagenes/taza-1.jpg" class="active" onclick="changeImage('per-5',this)"><img src="imagenes/taza-2.jpg" onclick="changeImage('per-5',this)"></div></div><h4>Tazas</h4><span class="code">PER-TAZ-305</span></div>
+  </div></div>
 </div>
 
-<footer>
-  © 2025 Productos y Servicios Elephant | Whatssapp: 4491023558 | Gmail: 
-</footer>
+<div class="container" id="servicios">
+  <div class="category"><h2>🛠️ Servicios</h2><div class="row">
+    <div class="card"><div class="product-gallery"><div class="main-image"><img src="imagenes/reparacion-1.jpg" id="ser-1"></div><div class="thumbnails"><img src="imagenes/reparacion-1.jpg" class="active" onclick="changeImage('ser-1',this)"><img src="imagenes/reparacion-2.jpg" onclick="changeImage('ser-1',this)"></div></div><h4>Reparación</h4><span class="code">SER-REP-001</span></div>
+    <div class="card"><div class="product-gallery"><div class="main-image"><img src="imagenes/mantenimiento-1.jpg" id="ser-2"></div><div class="thumbnails"><img src="imagenes/mantenimiento-1.jpg" class="active" onclick="changeImage('ser-2',this)"><img src="imagenes/mantenimiento-2.jpg" onclick="changeImage('ser-2',this)"></div></div><h4>Mantenimiento</h4><span class="code">SER-MAN-002</span></div>
+    <div class="card"><div class="product-gallery"><div class="main-image"><img src="imagenes/personalizacion-1.jpg" id="ser-3"></div><div class="thumbnails"><img src="imagenes/personalizacion-1.jpg" class="active" onclick="changeImage('ser-3',this)"><img src="imagenes/personalizacion-2.jpg" onclick="changeImage('ser-3',this)"></div></div><h4>Personalización</h4><span class="code">SER-PER-003</span></div>
+  </div></div>
+</div>
 
-<!-- ================== SCRIPT ================== -->
+<footer>© 2025 Productos y Servicios Elephant | Catálogo digital</footer>
+
 <script>
-  function changeImage(mainId, thumb) {
-    const mainImage = document.getElementById(mainId);
-    mainImage.src = thumb.src;
-
-    const thumbnails = thumb.parentElement.querySelectorAll('img');
-    thumbnails.forEach(img => img.classList.remove('active'));
-    thumb.classList.add('active');
-  }
+function changeImage(id,el){const main=document.getElementById(id);main.src=el.src;el.parentElement.querySelectorAll('img').forEach(i=>i.classList.remove('active'));el.classList.add('active')}
 </script>
-
-<!--
-COMO AGREGAR GALERIA TIPO MERCADO LIBRE:
-1. Cada producto debe tener un ID unico en la imagen principal
-2. Las miniaturas llaman a changeImage('ID', this)
-3. Aplica igual a productos y servicios
--->
-
 </body>
 </html>
